@@ -35,12 +35,13 @@ export default class Header extends Component<> {
     return (
       <View style={Styles.header}>
         <TouchableOpacity
+          testID={'headerActionButton'}
           onPress={
             this.props.type === 'back'
             ?
-            this.props.navigation.goBack
+            () => this.props.navigation.goBack()
             :
-            this.props.navigation.openDrawer
+            () => this.props.navigation.openDrawer()
         }
           style={Styles.leftIconContainer}
         >
@@ -74,7 +75,7 @@ export default class Header extends Component<> {
                <Text
                  style={[Styles.badgeCount,
                    {
-                     fontSize: (width * 0.033) - (1.4 * this.props.badgeCount.length),
+                     fontSize: (width * 0.025) - (1.4 * this.props.badgeCount.length),
                    },
                  ]}
                >
@@ -93,8 +94,8 @@ Header.propTypes = {
   badgeCount: PropTypes.string,
   leftIcon: PropTypes.string,
   navigation: PropTypes.shape({
-    goBack: PropTypes.func.isRequired,
-    openDrawer: PropTypes.func.isRequired,
+    goBack: PropTypes.func,
+    openDrawer: PropTypes.func,
   }).isRequired,
   rightIconList: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string,

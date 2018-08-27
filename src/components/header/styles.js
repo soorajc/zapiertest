@@ -36,7 +36,9 @@ const styles = StyleSheet.create({
   badge: {
     alignItems: 'center',
     backgroundColor: 'red',
+    borderColor: '#0086FF',
     borderRadius: Math.round(width * 0.05) / 2,
+    borderWidth: 2,
     height: Math.round(width * 0.05),
     justifyContent: 'center',
     marginLeft: width * 0.83,
@@ -44,9 +46,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: Math.round(width * 0.05),
   },
-  badgeNumber: {
+  badgeCount: {
     color: 'white',
     fontWeight: 'bold',
+    margin: '1%',
   },
 });
 
