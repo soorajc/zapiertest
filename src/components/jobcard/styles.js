@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     margin: '3%',
-    height: 0.24 * height,
+    height: 0.25 * height,
     width: width * 0.95,
   },
   imageBackground: {

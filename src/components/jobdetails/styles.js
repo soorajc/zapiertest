@@ -154,9 +154,11 @@ const styles = StyleSheet.create({
   panelLabel: {
     marginBottom: '4%',
     color: '#b5b5b5',
+    fontSize: width * 0.03,
   },
   panelText: {
     color: '#656565',
+    fontSize: width * 0.03,
   },
   buttonView: {
     flexDirection: 'row',
