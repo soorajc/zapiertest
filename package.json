@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
+    "jest-react-native": "^18.0.0",
     "prop-types": "^15.6.2",
     "react": "16.0.0",
     "react-native": "0.51.0",
@@ -26,6 +27,9 @@
     "eslint-plugin-react": "^6.10.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-navigation)/"
+    ]
   }
 }
